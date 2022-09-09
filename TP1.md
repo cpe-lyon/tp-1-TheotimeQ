@@ -55,7 +55,7 @@ Si on veut cherche option , on tape /option + entrée
 
 ![](/Images/IMG_3.png)
 
-Sudo ne fonctionne qu'avec des executable. La commande cd étant une commande shell build in , cela ne fonctionne pas .
+Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande shell build in , cela ne fonctionne pas .
 
 7 :
 
