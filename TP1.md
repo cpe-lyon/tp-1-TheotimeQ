@@ -27,7 +27,7 @@ Uniquement pour IRC et ETI
 
 ## Manuel :
 
-1 ** :** La commande which renvoi le chemin complet du fichier associé a la commande passés en paramettre
+1 : La commande which renvoi le chemin complet du fichier associé a la commande passés en paramettre
 
 2 : on peut rechercher un terme en tapant / suivis de ce qu'on cherche , puis faire entré
 
