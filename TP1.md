@@ -9,11 +9,11 @@
 
 [Exercice 2. Prise en main de l'interpréteur de commandes](#_Toc113528395)
 
-[Manuel](#_Toc113528396)
+ * [Manuel](#_Toc113528396)
 
-[Navigation dans l'arborescence des fichiers](#_Toc113528397)
+ * [Navigation dans l'arborescence des fichiers](#_Toc113528397)
 
-[Commandes importantes](#_Toc113528398)
+ * [Commandes importantes](#_Toc113528398)
 
 [Exercice 3. Découverte de l'éditeur de texte nano](#_Toc113528399)
 
