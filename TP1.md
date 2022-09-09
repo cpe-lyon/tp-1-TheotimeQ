@@ -49,15 +49,15 @@ Si on veut cherche option , on tape /option + entré
 
 5 :
 
- ![](../master/Images/IMG_2.jpg)
+ ![](/Images/IMG_2.jpg)
 
-6 :  ![](../master/Images/IMG_3.jpg)
+6 :  ![](/Images/IMG_3.jpg)
 
 Explication
 
 7 :
 
- ![](../master/Images/IMG_4.jpg)
+ ![](/Images/IMG_4.jpg)
 
 Pour créer l'arborescence suivante, je tape :
 
@@ -228,4 +228,4 @@ On verifie avec ls –la
 
 4
 
- ![](../master/Images/IMG_5.jpg)
+ ![](/Images/IMG_5.jpg)
