@@ -49,17 +49,17 @@ Si on veut cherche option , on tape /option + entrée
 
 5 : Voici ce qu'il se passe , nous n'avons pas la permission d'acceder à root
 
- ![](/Images/IMG_2.jpg)
+ ![](/Images/IMG_2.png)
 
 6 : Voici ce qu'il se passe lorqu'on essay de forcer avec sudo 
 
-![](/Images/IMG_3.jpg)
+![](/Images/IMG_3.png)
 
 Sudo ne fonctionne qu'avec des executable. La commande cd étant une commande shell build in , cela ne fonctionne pas .
 
 7 :
 
- ![](/Images/IMG_4.jpg)
+ ![](/Images/IMG_4.png)
 
 Pour créer l'arborescence suivante, je tape :
 
@@ -230,6 +230,6 @@ On verifie avec ls –la
 
 4 : on fait les changement de couleur necessaire et on ajoute l'heure .
 
- ![](/Images/IMG_5.jpg)
+ ![](/Images/IMG_5.png)
  
  Aprés rechargement , cela fonctionne!
