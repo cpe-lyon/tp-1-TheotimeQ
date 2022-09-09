@@ -1,5 +1,5 @@
 
- ![](../master/Images/IMG_1.png)
+ ![](/Images/IMG_1.png)
 
 **Quere Theotime 3ICS**
 
