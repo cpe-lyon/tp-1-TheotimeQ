@@ -164,7 +164,7 @@ ll est équivalent à
 ```console 
 User@localhost:~$ ls -l
 ``` 
-Il n'y a pas de manuel pour ll car c'est un alias de la commande ls -l
+Il n'y a pas de manuel pour ll car c'est un alias de la commande `ls -l`
 
 ### 5 : Quelle commande permet d’afficher les fichiers contenus dans le dossier /bin ?
 ```console 
@@ -193,12 +193,12 @@ Cette commande écrit dans un fichier ( qu'elle créer si necessaire ) nomé plo
 
 ### 9 : Que fait la commande ___echo 'bib' >> plop___ exécutée 2 fois ?
 ```console 
-User@localhost:~$ echo bib \>\> plop
+User@localhost:~$ echo 'bib' \>\> plop
 ``` 
 Cette commande permet d'ajouter bib dans le fichier plop. Si le fichier n'existe pas il le créer.
 
 ### 10 : Interprétez le comportement de la commande sleep 10 | echo 'toto' ?
-'Sleep 10 | echo 'toto' ecrit toto dans le termial et suspend l'éxecution des autres commandes pendant 10 sec
+`Sleep 10 | echo 'toto' ` ecrit toto dans le termial et suspend l'éxecution des autres commandes pendant 10 sec
 
 ### 11 : A quoi sert la commande ___file___ ? Essayez la sur des fichiers de types différents.
 La commande 'file' permet d'avoir des informations sur le type de fichier que l'on test indépendament de son extenssion.
@@ -207,8 +207,8 @@ La commande 'file' permet d'avoir des informations sur le type de fichier que l'
 
 Créez un fichier original qui contient la chaîne Hello Toto ! ;
 ```console 
-User@localhost:~$ Touch original
-echo « Hello toto » \> original
+User@localhost:~$ touch original
+echo 'Hello toto' \> original
 ``` 
 
 Créer ensuite un lien lien\_phy vers ce fichier avec la commande ln original lien\_phy.
@@ -218,7 +218,7 @@ User@localhost:~$ ln original lien\_phy
 
 Modifiez à présent le contenu de original et affichez le contenu de lien\_phy
 ```console 
-User@localhost:~$ echo « Coucou maman » \> original
+User@localhost:~$ echo 'Coucou maman' \> original
 cat lien\_phy
 ``` 
 
@@ -290,10 +290,10 @@ User@localhost:~$ cat /etc/passwd | sed 's/ :.\*$/ /g ' | sort –r
 ### 19 : Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement les utilisateurs connectés) ?
 Il faut compter le nombres d'utilisateurs enregistrés dans la base de donnée stockée dans /etc/passwd.
 
-Pour cela on peut faire un 'wc –l /etc/passwd' pour compter le nombre de ligne de cette base de donnée . On trouve 34.
+Pour cela on peut faire `wc –l /etc/passwd` pour compter le nombre de ligne de cette base de donnée . On trouve 34.
 
 ### 20 : Combien de pages de manuel comportent le mot-clé conversion dans leur description ?
-Il faut chercher le nombre de page qui contienne conversion dans leur description , pour cela on tape : 'man –k conversion | wc -l'
+Il faut chercher le nombre de page qui contienne conversion dans leur description , pour cela on tape : `man –k conversion | wc -l`
 
 ### 21 : A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine 
 ```console 
@@ -364,15 +364,15 @@ Ctrl + x pour quitter et enregistrer
 
 1 : On fait une copie du .bashrc :
 
-On vas dans le repertoire personel avec cd ~
+On vas dans le repertoire personel avec `cd ~`
 
-On copie le .bashrc avec cp .bashrc .bashrc\_bak
+On copie le .bashrc avec `cp .bashrc .bashrc\_bak`
 
-On verifie avec ls –la
+On verifie avec `ls –la`
 
-2 : on cherche la ligne avec ctrl + W , puis on la decommmante
+2 : on cherche la ligne avec ctrl + W , puis on la décommente
 
-3 : on recharge le .bash avec source .bashrc\_bak
+3 : on recharge le .bash avec `source .bashrc\_bak`
 
 4 : on fait les changement de couleur necessaire et on ajoute l'heure .
 
