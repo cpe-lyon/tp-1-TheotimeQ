@@ -17,7 +17,7 @@
 
 [Exercice 3. Découverte de l'éditeur de texte nano](#_Toc113528399)
 
-[Exercice 4. Personnalisation du shel](#_Toc113528400)
+[Exercice 4. Personnalisation du shell](#_Toc113528400)
 
 # Exercice 1. Installation du serveur
 
@@ -39,7 +39,7 @@ on peut rechercher un terme en tapant / suivis de ce qu'on cherche , puis entré
 ```console
 /option
 ```
-Si on veut cherche option , on tape /option + entrée
+Si on veut chercher option , on tape /option + entrée
 
 ### 3 : Comment quitte-t-on le manuel ?
 q permet de quitter le man.
@@ -83,7 +83,7 @@ Voici ce qu'il se passe lorqu'on essay de forcer avec sudo
 
 ![](/Images/IMG_3.png)
 
-Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande shell build in , cela ne fonctionne pas . On peut utiliser sudo -s pour que cela fonctionne.
+Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande shell build in , il faut utiliser sudo -s.
 
 ### 7 : à partir de votre dossier personnel, créez l’arborescence suivante :
 
@@ -92,31 +92,28 @@ Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande s
 Pour créer l'arborescence suivante, je tape :
 
 ```console
-User@localhost:~$ - cd ~
-- mdkir Dossier1
-- mkdir Dossier2
-- touch Dossier1/Fichier1
-- mkdir Dossier2/Dossier2.1
-- mkdir Dossier2/Dossier2.2
-- touch Dossier2/Dossier2.2/Fichier2
-- touch Dossier2/Dossier2.2/Fichier3
+User@localhost:~$ cd ~
+mdkir Dossier1
+mkdir Dossier2
+touch Dossier1/Fichier1
+mkdir Dossier2/Dossier2.1
+mkdir Dossier2/Dossier2.2
+touch Dossier2/Dossier2.2/Fichier2
+touch Dossier2/Dossier2.2/Fichier3
 ```
 
 ### 8 : revenez dans votre dossier personnel ; à l’aide de la commande rm, essayez de supprimer Fichier1, puis Dossier1 ; que se passe-t-il ?
-Si on tape 
 ```console 
 User@localhost:~$ rm Fichier1
-```  
-, ca fonctionne.
+```
+Le fichier1 est bien suprimé
 
-Si on tape 
 ```console 
 User@localhost:~$ rm Dossier1
 ``` 
-Ca ne fonctionne pas , car Dossier1 est un dossier.
+Le dossier1 ne se suprime pas , car Dossier1 est un dossier.
 
-### 9 : 
-Quelle commande permet de supprimer un dossier ? 
+### 9 : Quelle commande permet de supprimer un dossier ? 
 ```console 
 User@localhost:~$ rmdir Dossier1
 ``` 
@@ -126,18 +123,17 @@ La commande rmdir Dossier1 permet de suprimer le dossier
 ```console 
 User@localhost:~$ rmdir Dossier2
 ``` 
- ne fonctionnee pas , car le dossier n'est pas vide.
+Cela ne fonctione pas , car le Dossier2 n'est pas vide.
 
 ### 11 : Comment supprimer en une seule commande Dossier2 et son contenu ?
-On peut faire 
+On peut faire la commande suivante pour supprimer le dossier et tout son contenu.
 ```console 
 User@localhost:~$ rm –rf Dossier2
 ``` 
-pour supprimer le dossier et tout son contenu
 
 ## Commandes importantes :
 
-### 1 : Quelle commande permet d’afficher l’heure ? A quoi sert la commande ___time___ ?
+### 1 : Quelle commande permet d’afficher l’heure ? A quoi sert la commande 'time' ?
 
 La commande date permet d'afficher la date
 ```console 
