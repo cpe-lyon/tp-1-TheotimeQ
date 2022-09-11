@@ -1,6 +1,3 @@
-
- ![](/Images/IMG_1.png)
-
 **Quere Theotime 3ICS**
 
 # Table des matières
@@ -150,7 +147,7 @@ User@localhost:~$ time
 ```console 
 User@localhost:~$ ls la
 ``` 
-permet d'afficher les fichier caché . Les fichier avec un point sont des fichiers cachés;
+La commande permet d'afficher les fichiers cachés . Les fichiers avec un point sont des fichiers cachés;
 
 ### 3 : Où se situe le programme ___ls___ ?
 Pour trouver ou se situe le programme ls , on tape 
@@ -167,43 +164,63 @@ ll est équivalent à
 ```console 
 User@localhost:~$ ls -l
 ``` 
-, il n'y a pas de manuel pour ll car c'est un alias de la commande ls -l
+Il n'y a pas de manuel pour ll car c'est un alias de la commande ls -l
 
 ### 5 : Quelle commande permet d’afficher les fichiers contenus dans le dossier /bin ?
 ```console 
 User@localhost:~$ ls /usr/bin
 ``` 
- permet d'afficher le contenus du dossier bin
+La commande permet d'afficher le contenus du dossier bin.
 
-6 : ls liste le contenu d'un dossier
+### 6 : Que fait la commande ___ls___ .. ?
+```console 
+User@localhost:~$ ls
+``` 
+Cette commande liste le contenu d'un dossier.
 
-7 : pwd donne le chemin du dossier courant
+### 7 : Quelle commande donne le chemin complet du dossier courant ?
+```console 
+User@localhost:~$ ls
+``` 
+Cette commmande donne le chemin du dossier courant.
 
-8 : echo 'bib' \> plop ecrit bib dans un fichier ( qu'il créer si necessaire ) nomé plop , il écrase au passage le contenu présent dans le fichier plop avant d'écrire dedans.
+### 8 : Que fait la commande ___echo 'bib' > plop___ exécutée 2 fois ?
 
-9 : echo bib \>\> plop , permet d'ajouter bib dans le fichier plop. Si le fichier n'existe pas il le créer
+```console 
+User@localhost:~$ echo 'bib' \> plop
+``` 
+Cette commande écrit dans un fichier ( qu'elle créer si necessaire ) nomé plop , il écrase au passage le contenu présent dans le fichier plop avant d'écrire dedans.
 
-10 : sleep 10 | echo 'toto ecrit toto dans le termial et suspens l'éxecution des autre commande pendant 10 sec
+### 9 : Que fait la commande ___echo 'bib' >> plop___ exécutée 2 fois ?
+```console 
+User@localhost:~$ echo bib \>\> plop
+``` 
+Cette commande permet d'ajouter bib dans le fichier plop. Si le fichier n'existe pas il le créer.
 
-11 : La commande file permet d'avoir des informations sur le type de fichier que l'on test ( txt , sh... )
+### 10 : Interprétez le comportement de la commande sleep 10 | echo 'toto' ?
+'Sleep 10 | echo 'toto' ecrit toto dans le termial et suspend l'éxecution des autres commandes pendant 10 sec
 
-12 :
+### 11 : A quoi sert la commande ___file___ ? Essayez la sur des fichiers de types différents.
+La commande 'file' permet d'avoir des informations sur le type de fichier que l'on test indépendament de son extenssion.
+
+### 12 : Créez un fichier original qui contient la chaîne Hello Toto ! ; créer ensuite un lien lien_phy vers ce fichier avec la commande ln original lien_phy. Modifiez à présent le contenu de original et affichez le contenu de lien_phy : qu’observe-t-on ? Supprimez le fichier original ; quelle conséquence cela a-t-il sur lien_phy ?
 
 Créez un fichier original qui contient la chaîne Hello Toto ! ;
-
-Touch original
-
-Echo « Hello toto » \> original
+```console 
+User@localhost:~$ Touch original
+echo « Hello toto » \> original
+``` 
 
 Créer ensuite un lien lien\_phy vers ce fichier avec la commande ln original lien\_phy.
-
-ln original lien\_phy
+```console 
+User@localhost:~$ ln original lien\_phy
+``` 
 
 Modifiez à présent le contenu de original et affichez le contenu de lien\_phy
-
-Echo « Coucou maman » \> original
-
-Cat lien\_phy
+```console 
+User@localhost:~$ echo « Coucou maman » \> original
+cat lien\_phy
+``` 
 
 On observe que le contenu de lien\_phy est modifier aussi .
 
@@ -211,7 +228,10 @@ Supprimez le fichier original ; quelle conséquence cela a-t-il sur lien\_phy ?
 
 En supprimant le fichier original , on observe que lien\_phy existe toujours et qu'il n'est pas modifié.
 
-13 : on fait la commande : ln -s lien\_phy lien\_sym
+### 13 : Créez à présent un lien symbolique lien_sym sur lien_phy avec la commande ln -s lien_phy lien_sym.Modifiez le contenu de lien_phy ; quelle conséquence pour lien_sym ? Et inversement ? Supprimez le fichier lien_phy ; quelle conséquence cela a-t-il sur lien_sym ?
+```console 
+User@localhost:~$ ln -s lien\_phy lien\_sym
+``` 
 
 On modifie lien\_phy : le contenu de lien sym est modifié aussi
 
@@ -219,59 +239,110 @@ On modifie lien\_sym : le contenu de lien phy est modifié aussi
 
 On suprpime lien\_phy : cela ne supprime pas lien\_sym , mais le liens est cassé et l'on ne peut plus lire / écrire sur le fichier
 
-14 : ctrl + s stop le défilemennt
+### 14 : Affichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran ?
+```console 
+User@localhost:~$ cat /var/log/
+``` 
+ctrl + s stop le défilemennt
 
-Ctrlk + q reprend le défilement
+ctrl + q reprend le défilement
 
-15 : head /var/log/syslog 5 permet d'afficher les premieres lignes d'un fichier
+### 15 : Affichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, puis seulement les lignes 10 à 20
 
-Tail /var/log/syslog 15 permet d'afficher les 15 dernieres ligne
+Pour affichier seulement les 5 premieres lignes : 
+```console 
+User@localhost:~$ head /var/log/syslog 5
+``` 
+ 
+Pour affichier seulement les 15 dernieres lignes : 
+```console 
+User@localhost:~$ tail /var/log/syslog 15
+``` 
 
-Sed –n'10,11p' /var/log/syslog'
+Pour affichier seulement les lignes 10 à 20 :
+```console 
+User@localhost:~$ sed –n'10,20p' /var/log/syslog'
+``` 
 
-16 : la commande dmesg | less affiche les messages stockés dans le noyaux sur une seule page à la fois
+### 16 : Que fait la commande dmesg | less ?
+D'apres le man , la commande dmesg | less affiche les messages stockés dans le noyaux,  une seule page à la fois
 
-17 : on affiche le contenu de /etc/passwd avec cat /etc/passwd .
+### 17 : Affichez à l’écran le fichier /etc/passwd ; que contient-il ? Quelle commande permet d’afficher la page de manuel de ce fichier ?
+on affiche le contenu de /etc/passwd avec :
+```console 
+User@localhost:~$ cat /etc/passwd
+``` 
 
 Ce fichier contient une base de donnée avec tous les comptes utilisateurs trouvés dans le systems.
 
-Man /etc/passwd permet d'afficher la page de manuel de ce fichier
+Pour afficher la page du manuel de psswd : 
 
-18 : pour afficher seulement la première collone affichée par ordre alphabetique inverse on fait :
+```console 
+User@localhost:~$ man /etc/passwd
+``` 
 
-Cat /etc/passwd | sed 's/ :.\*$/ /g ' | sort –r
+### 18 : Affichez seulement la première colonne triée par ordre alphabétique inverse pour afficher seulement la première collone affichée par ordre alphabetique inverse on fait :
 
-19 : Il faut compter le nombre d'user enregistrés dans la base de donnée stockée dans /etc/passwd.
+```console 
+User@localhost:~$ cat /etc/passwd | sed 's/ :.\*$/ /g ' | sort –r
+``` 
 
-Pour cela on peut faire un wc –l /etc/passwd pour compter le nombre de ligne de cette base de donnée . On trouve 34.
+### 19 : Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement les utilisateurs connectés) ?
+Il faut compter le nombres d'utilisateurs enregistrés dans la base de donnée stockée dans /etc/passwd.
 
-20 : Il faut chercher le nombre de page qui contienne conversion dans leur description , pour cela on tape : man –k conversion | wc -l
+Pour cela on peut faire un 'wc –l /etc/passwd' pour compter le nombre de ligne de cette base de donnée . On trouve 34.
 
-21 : find / -type f –name 'passwd'
+### 20 : Combien de pages de manuel comportent le mot-clé conversion dans leur description ?
+Il faut chercher le nombre de page qui contienne conversion dans leur description , pour cela on tape : 'man –k conversion | wc -l'
 
-22 : pour rediriger la sortie standard dans le fichier ~/list\_passwd\_files.txt et led erreurs dans /dev/null on fait :
+### 21 : A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine 
+```console 
+User@localhost:~$ find / -type f –name 'passwd'
+``` 
 
-: find / -type f –name 'passwd' \> ~/list\_passwd\_files.txt 2\> /dev/null
+### 22 : Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null
 
-23 : cat ./.bashrc | grep ll
+Pour rediriger la sortie standard dans le fichier ~/list\_passwd\_files.txt et led erreurs dans /dev/null on fait :
 
-24 : Plocate n'est pas installé , on ne peut pas utiliser la comande
+```console 
+User@localhost:~$ find / -type f –name 'passwd' \> ~/list\_passwd\_files.txt 2\> /dev/null
+``` 
 
-25 : De même
+### 23 : Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu précédemment
 
-ALT + FX pour multiple terminal
+```console 
+User@localhost:~$ cat ./.bashrc | grep ll
+``` 
+
+### 24 : Utilisez la commande locate pour trouver le fichier history.log.
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+### 25 : Créer un fichier dans votre dossier personnel puis utilisez locate pour le trouver. Apparaît-il ? Pourquoi ? 
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+#### Tips : 
+**ALT + FX pour multiple terminal**
 
 # Exercice 3. Découverte de l'éditeur de texte nano
 
 On copie le fichier syslog avec :
 
-Cp /var/log/syslog log.txt
+```console 
+User@localhost:~$ cp /var/log/syslog log.txt
+``` 
 
 On l'ouvre avec nano :
 
-Nano log.txt
+```console 
+User@localhost:~$ nano log.txt
+``` 
 
-Pour voir le contenu , il nous faut les permissions , on fait sudo chmod 777 log.txt
+Pour voir le contenu , il nous faut les permissions , on fait 
+
+```console 
+User@localhost:~$ sudo chmod 777 log.txt
+``` 
 
 On refait nano :
 
