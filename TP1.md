@@ -27,43 +27,72 @@ Uniquement pour IRC et ETI
 
 ## Manuel :
 
-1 : La commande which renvoi le chemin complet du fichier associé à la commande passés en paramettre
+### 1 : A l’aide du manuel, identifiez le rôle de la commande which
+```console
+User@localhost:~$ man which
+```
+La commande which renvoi le chemin complet du fichier associé à la commande passés en paramettre.
 
-2 : on peut rechercher un terme en tapant / suivis de ce qu'on cherche , puis entrée
+### 2 : Quand on consulte cette page, comment peut-on rechercher, par exemple, le mot option ?
+on peut rechercher un terme en tapant / suivis de ce qu'on cherche , puis entrée
 
+```console
+/option
+```
 Si on veut cherche option , on tape /option + entrée
 
-3 : q permet de quitter le man
+### 3 : Comment quitte-t-on le manuel ?
+q permet de quitter le man.
 
-4 : la commande pour voir la première page qui présente le contenu d'une section (l'intro) est : man 6 intro. La section 6 du manuel parle des jeux « amusant » et des petits programmes disponibles sur le systeme
+### 4 : Chaque section du manuel a une première page, qui présente le contenu de la section. Afficher la première page de la section 6 ; de quoi parle cette section ?
+La commande pour voir la première page qui présente le contenu d'une section (l'intro) est : man 6 intro. La section 6 du manuel parle des jeux « amusants » et des petits programmes disponibles sur le systeme
+
+```console
+User@localhost:~$ man 6 intro
+```
 
 ## Navigation dans l'arborescence des fichiers :
 
-1 : cd /vag/log
+### 1 : Pour aller dans le dossier /var/log
+```console
+User@localhost:~$ cd /vag/log
+```
 
-2 : cd ..
+### 2 : Pour remonter dans le dossier parent
+```console
+User@localhost:~$ cd ..
+```
 
-3 : cd ~
+### 3 : Pour retourner au dossier personnel 
+```console
+User@localhost:~$ cd ~
+```
 
-4 : cd –
+### 4 : Pour revenir au dossier précedent
+```console
+User@localhost:~$ cd –
+```
 
-5 : Voici ce qu'il se passe , nous n'avons pas la permission d'acceder à root
+### 5 : essayez d’accéder au dossier /root ; que se passe-t-il ?
+Voici ce qu'il se passe , nous n'avons pas la permission d'acceder à root
 
  ![](/Images/IMG_2.png)
 
-6 : Voici ce qu'il se passe lorqu'on essay de forcer avec sudo 
+### 6 : essayez la commande sudo cd /root ; que se passe-t-il ? Expliquez
+Voici ce qu'il se passe lorqu'on essay de forcer avec sudo 
 
 ![](/Images/IMG_3.png)
 
-Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande shell build in , cela ne fonctionne pas .
+Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande shell build in , cela ne fonctionne pas . On peut utiliser sudo -s pour que cela fonctionne.
 
-7 :
+### 7 : à partir de votre dossier personnel, créez l’arborescence suivante :
 
  ![](/Images/IMG_4.png)
 
 Pour créer l'arborescence suivante, je tape :
 
-- cd ~
+```console
+User@localhost:~$ - cd ~
 - mdkir Dossier1
 - mkdir Dossier2
 - touch Dossier1/Fichier1
@@ -71,34 +100,84 @@ Pour créer l'arborescence suivante, je tape :
 - mkdir Dossier2/Dossier2.2
 - touch Dossier2/Dossier2.2/Fichier2
 - touch Dossier2/Dossier2.2/Fichier3
+```
 
-8 : Si on tape rm Fichier1 , ca fonctionne
+### 8 : revenez dans votre dossier personnel ; à l’aide de la commande rm, essayez de supprimer Fichier1, puis Dossier1 ; que se passe-t-il ?
+Si on tape 
+```console 
+User@localhost:~$ rm Fichier1
+```  
+, ca fonctionne.
 
-Si on tape rm Dossier1 , ca ne fonctionne pas , car Dossier1 est un dossier.
+Si on tape 
+```console 
+User@localhost:~$ rm Dossier1
+``` 
+Ca ne fonctionne pas , car Dossier1 est un dossier.
 
-9 : La commande rmdir Dossier1 permet de suprimer le dossier
+### 9 : 
+Quelle commande permet de supprimer un dossier ? 
+```console 
+User@localhost:~$ rmdir Dossier1
+``` 
+La commande rmdir Dossier1 permet de suprimer le dossier
 
-10 : rmdir Dossier2 ne fonctionnee pas , car le dossier n'est pas vide.
+### 10 : Que se passe-t-il quand on applique cette commande à Dossier2 ?
+```console 
+User@localhost:~$ rmdir Dossier2
+``` 
+ ne fonctionnee pas , car le dossier n'est pas vide.
 
-11 : On peut faire rm –rf Dossier2 pour supprimer le dossier et tout son contenu
+### 11 : Comment supprimer en une seule commande Dossier2 et son contenu ?
+On peut faire 
+```console 
+User@localhost:~$ rm –rf Dossier2
+``` 
+pour supprimer le dossier et tout son contenu
 
 ## Commandes importantes :
 
-1 : La commande date permet d'afficher la date
+### 1 : Quelle commande permet d’afficher l’heure ? A quoi sert la commande ___time___ ?
+
+La commande date permet d'afficher la date
+```console 
+User@localhost:~$ date
+``` 
 
 Time permet de calculer le temps d'éxecution d'une commande
+```console 
+User@localhost:~$ time
+``` 
 
-2 : ls la permet d'afficher les fichier caché . Les fichier avec un point sont des fichiers cachés;
+### 2 : Dans votre dossier personnel, tapez successivement les commandes ___ls___ puis ___la___ ; que peut-on en déduire sur les fichiers commençant par un point ?
 
-3 : Pour trouver ou se situe le programme ls , on tape which ls
+```console 
+User@localhost:~$ ls la
+``` 
+permet d'afficher les fichier caché . Les fichier avec un point sont des fichiers cachés;
+
+### 3 : Où se situe le programme ___ls___ ?
+Pour trouver ou se situe le programme ls , on tape 
+```console 
+User@localhost:~$ which ls
+``` 
 
 On trouve : /usr/bin/ls
 
 La commande ls est donc dans /usr/bin
 
-4 : ll est équivalent a ls –l , il n'y a pas de manuel pour ll car c'est un alias de la commande ls -l
+### 4 : Que fait la commande ___ll___ ? (indice : la commande alias peut vous aider)
+ll est équivalent à 
+```console 
+User@localhost:~$ ls -l
+``` 
+, il n'y a pas de manuel pour ll car c'est un alias de la commande ls -l
 
-5 : ls /usr/bin permet d'afficher le contenus du dossier bin
+### 5 : Quelle commande permet d’afficher les fichiers contenus dans le dossier /bin ?
+```console 
+User@localhost:~$ ls /usr/bin
+``` 
+ permet d'afficher le contenus du dossier bin
 
 6 : ls liste le contenu d'un dossier
 
