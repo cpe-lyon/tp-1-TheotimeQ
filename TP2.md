@@ -38,15 +38,42 @@ Dans notre cas , HOME contient `/home/User`
 ## 3 : Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL
 
 `LANG` : contient la langue des messages à afficher
+
 `PWD` : contient le chemin absolu vers le répertoire courant
+
 `OLDPWD` : contient le chemin absolu vers le répertoire courant précédent 
+
 `SHELL` : l'interpreteur shell utilisé par défaut. La valeur habituelle sous linux est /bin/bash
 
 ## 4 : Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe
 
+Pour creer une variable , on tape : 
+```console 
+User@localhost:~$MY_VAR="coucou maman"
+```
+Pour verifier son existance : 
+```console 
+User@localhost:~$ echo $MY_VAR
+coucou maman
+```
+
 ## 5 : Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.
 
+Apres avoir lancé bash , la variable MY_VAR n'existe plus . En effet MY_VAR à été crée seulement dans le shell car c'est une variable local. Elle n'existe donc pas dans bash
+
+Une fois exit , on peut retrouver notre variable.
+
 ## 6 : Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.
+
+On transforme MY_VAR en variable d'environnement 
+```console 
+User@localhost:~$ export MY_VAR="coucou maman"
+```
+Cette fois ci apres avoir lancé bash on peut retrouver notre variable : 
+```console 
+User@localhost:~$ printenv $MY_VAR
+coucou maman
+```
 
 ## 7 : Créer la variable d’environnement NOM ayant pour contenu vos prénom et nom séparés par un espace.Afficher la valeur de NOM pour vérifier que l’affectation est correcte.
 
@@ -102,3 +129,5 @@ function is_number()
 
 ## Écrivez un script qui affiche les combinaisons possibles de couleurs (cf. TP 1) :
 
+
+unzip > opy.zip 2>> /var/log | analyse 2> erreurs analyse/log | correction 2> erreur-correction.log | tee notes.csv | moyenne
