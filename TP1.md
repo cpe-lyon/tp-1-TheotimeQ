@@ -315,11 +315,13 @@ User@localhost:~$ cat ./.bashrc | grep ll
 ``` 
 
 ### 24 : Utilisez la commande locate pour trouver le fichier history.log.
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+```console 
+User@localhost:~$ locate history.log
+/var/log/apt/history.log
+``` 
 
 ### 25 : Créer un fichier dans votre dossier personnel puis utilisez locate pour le trouver. Apparaît-il ? Pourquoi ? 
-
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Avec `locate` nous ne trouvons pas le fichier. La commande `locate` recherche dans une base de donnée mise à jours une fois par jour . Pour trouver le nouveau fichier il faut donc la mettre à jour avec `sudo updatedb`
 
 #### Tips : 
 **ALT + FX pour multiple terminal**
