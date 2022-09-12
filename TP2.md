@@ -20,9 +20,27 @@
 
 ## 1 : Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?
 
+Toutes les commandes ce trouvent dans les fichiers specifié dans la variable d'environnement PATH .
+```console 
+User@localhost:~$ printenv PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+```
+
 ## 2 : Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans votre répertoire personnel ?
 
+La variable d'environnement `$HOME` permet au cd de trouver le repertoire personnel quand il n'y a pas d'argument.
+```console 
+User@localhost:~$ printenv HOME
+/home/User
+```
+Dans notre cas , HOME contient `/home/User`
+
 ## 3 : Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL
+
+`LANG` : contient la langue des messages à afficher
+`PWD` : contient le chemin absolu vers le répertoire courant
+`OLDPWD` : contient le chemin absolu vers le répertoire courant précédent 
+`SHELL` : l'interpreteur shell utilisé par défaut. La valeur habituelle sous linux est /bin/bash
 
 ## 4 : Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe
 
