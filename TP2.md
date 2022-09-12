@@ -77,7 +77,22 @@ coucou maman
 
 ## 7 : Créer la variable d’environnement NOM ayant pour contenu vos prénom et nom séparés par un espace.Afficher la valeur de NOM pour vérifier que l’affectation est correcte.
 
+On creer la variable d'envirennement NOM : 
+```console 
+User@localhost:~$ export NOM="Theotime Quere"
+```
+On affiche sa valeur : 
+```console 
+User@localhost:~$ printenv NOM
+Theotime Quere
+```
+
 ## 8 : Ecrivez une commande qui affiche ”Bonjour à vous, prenom nom !” en utilisant la variable NOM
+
+```console 
+User@localhost:~$ echo "Bonjour à vous, $NOM !"
+Bonjour à vous, Theotime Quere !
+```
 
 ## 9 Quelle différence y a-t-il entre donner une valeur vide à une variable d’environnement et l’utilisation de la commande unset ?
 
