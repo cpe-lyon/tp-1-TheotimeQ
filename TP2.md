@@ -145,17 +145,66 @@ function is_number()
 ```
 * Il affichera un message d’erreur dans le cas contraire. *
 
+```bash
+
+function is_number()
+{
+  re='^[+-]?[0-9]+([.][0-9]+)?$'
+  if ! [[ $1 =~ $re ]] ; then
+    return 1
+  else
+    return 0
+  fi
+}
+
+is_number $1
+
+if ! [[ $1 -eq 0 ]] ; 
+then
+  echo '$1 est un nombre reel '
+else
+  echo '$1 n'est pas un nombre reel'
+fi
+
+```
+
+ ![](/TP2_IMG/TP2_2.png)
+
 # Exercice 4. Controle d'utilisateur [Anch4]
 
 ## Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation : nom_du_script nom_utilisateur”, où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)
+
+```bash
+#!/bin/bash
+
+PASSWORD='test'
+
+read -p 'Mot de passe :' -s mdp 
+
+if [[ $mdp == $password ]]
+then 
+  echo 'Bon mot de passe'
+else 
+  echo 'Mauvais mot de passe'
+fi
+```
+
+
+
+ ![](/TP2_IMG/TP2_3.png)
 
 # Exercice 5. Factorielle [Anch5]
 
 ## Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).
 
+
+ ![](/TP2_IMG/TP2_4.png)
+ 
 # Exercice 6. Le juste prix [Anch6]
 
 ## Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !” selon les cas (vous utiliserez $RANDOM).
+
+ ![](/TP2_IMG/TP2_5.png)
 
 # Exercice 7. Statistiques [Anch7]
 
@@ -164,9 +213,14 @@ function is_number()
 ## 2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
 ## 3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.
 
+ ![](/TP2_IMG/TP2_6.png)
+
 # Exercice 8. Statistiques [Anch8]
 
 ## Écrivez un script qui affiche les combinaisons possibles de couleurs (cf. TP 1) :
+
+
+ ![](/TP2_IMG/TP2_7.png)
 
 
 unzip > opy.zip 2>> /var/log | analyse 2> erreurs analyse/log | correction 2> erreur-correction.log | tee notes.csv | moyenne
