@@ -96,7 +96,14 @@ Bonjour à vous, Theotime Quere !
 
 ## 9 Quelle différence y a-t-il entre donner une valeur vide à une variable d’environnement et l’utilisation de la commande unset ?
 
+Quand on donne une valeur vide , la variable existe mais n'a pas de valeur . Avec Unset , la variable n'existe plus , elle est effacée.
+
 ## 10 : Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre dossier personnel d’après bash)
+
+```console 
+User@localhost:~$ echo "$\HOME = $HOME"
+$HOME = /home/User
+```
 
 # -- Programmation Bash --
 
