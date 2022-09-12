@@ -80,7 +80,7 @@ Voici ce qu'il se passe lorqu'on essay de forcer avec sudo
 
 ![](/Images/IMG_3.png)
 
-Sudo ne fonctionne qu'avec des executables. La commande cd étant une commande shell build in , il faut utiliser sudo -s.
+Sudo cherche dans la commande dans les dossier specifié dans le PATH , cd etant Sheel Built-in , la commande n'est pas specifié dans le PATH. Sudo ne fonctionne pas
 
 ### 7 : à partir de votre dossier personnel, créez l’arborescence suivante :
 
