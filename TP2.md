@@ -126,6 +126,8 @@ else
 fi
 ```
 
+ ![](/TP2_IMG/TP2_1.png)
+
 # Exercice 3. Expression rationelles [Anch3]
 
 ## Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :
