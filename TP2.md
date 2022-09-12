@@ -2,38 +2,69 @@
 
 # Table des matières
 
-[Exercice 1. ]
+[Exercice 1.Variables d'environnement]
 
-[Exercice 2. Prise en main de l'interpréteur de commandes]
+[Exercice 2.Contrôle de mot de passe]
 
- * [Manuel]
+[Exercice 3.Expression rationelles]
 
- * [Navigation dans l'arborescence des fichiers]
+[Exercice 4.Controle d'utilisateur]
 
- * [Commandes importantes]
+[Exercice 5.Factorielle]
 
-[Exercice 3. Découverte de l'éditeur de texte nano]
+[Exercice 6.Le juste prix]
 
-[Exercice 4. Personnalisation du shell]
+[Exercice 7.Statistique]
 
-# Exercice 1. Installation du serveur
+# Exercice 1. Variables d'environnement
 
-Uniquement pour IRC et ETI
+## 1 : Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?
 
-# Exercice 2. Prise en main de l'interpréteur de commandes
+## 2 : Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans votre répertoire personnel ?
 
-## Manuel :
+## 3 : Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL
 
-### 1 : A l’aide du manuel, identifiez le rôle de la commande which
-```console
-User@localhost:~$ man which
+## 4 : Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe
+
+## 5 : Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.
+
+## 6 : Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.
+
+## 7 : Créer la variable d’environnement NOM ayant pour contenu vos prénom et nom séparés par un espace.Afficher la valeur de NOM pour vérifier que l’affectation est correcte.
+
+## 8 : Ecrivez une commande qui affiche ”Bonjour à vous, prenom nom !” en utilisant la variable NOM
+
+## 9 Quelle différence y a-t-il entre donner une valeur vide à une variable d’environnement et l’utilisation de la commande unset ?
+
+## 10 : Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre dossier personnel d’après bash)
+
+# -- Programmation Bash --
+
+# Exercice 2. Contrôle de mot de passe
+
+## Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.
+
+# Exercice 3. Expression rationelles
+
+## Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :
+
+```bash 
+function is_number()
+{
+  re='^[+-]?[0-9]+([.][0-9]+)?$'
+  if ! [[ $1 =~ $re ]] ; then
+    return 1
+  else
+    return 0
+  fi
+}
 ```
-La commande which renvoi le chemin complet du fichier associé à la commande passés en paramettre.
+Il affichera un message d’erreur dans le cas contraire.
 
-### 2 : Quand on consulte cette page, comment peut-on rechercher, par exemple, le mot option ?
-on peut rechercher un terme en tapant / suivis de ce qu'on cherche , puis entrée
+# Exercice 4. Controle d'utilisateur
 
-```console
-/option
-```
-Si on veut chercher option , on tape /option + entrée
+# Exercice 5. Factorielle
+
+# Exercice 6. Le juste prix
+
+# Exercice 7. Statistiques
