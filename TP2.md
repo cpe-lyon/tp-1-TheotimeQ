@@ -111,6 +111,21 @@ $HOME = /home/User
 
 ## Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.
 
+```bash
+#!/bin/bash
+
+PASSWORD='test'
+
+read -p 'Mot de passe :' -s mdp 
+
+if [[ $mdp == $password ]]
+then 
+  echo 'Bon mot de passe'
+else 
+  echo 'Mauvais mot de passe'
+fi
+```
+
 # Exercice 3. Expression rationelles [Anch3]
 
 ## Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :
