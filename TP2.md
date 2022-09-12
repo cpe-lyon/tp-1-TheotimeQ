@@ -146,7 +146,7 @@ function is_number()
 * Il affichera un message d’erreur dans le cas contraire. *
 
 ```bash
-
+#!/bin/bash
 function is_number()
 {
   re='^[+-]?[0-9]+([.][0-9]+)?$'
@@ -159,16 +159,15 @@ function is_number()
 
 is_number $1
 
-if ! [[ $1 -eq 0 ]] ; 
+if [[ $? -eq 0 ]] ; 
 then
-  echo '$1 est un nombre reel '
+  echo '$1 est un nombre reel'
 else
   echo '$1 n'est pas un nombre reel'
 fi
-
 ```
 
- ![](/TP2_IMG/TP2_2.png)
+![](/TP2_IMG/TP2_2.png)
 
 # Exercice 4. Controle d'utilisateur [Anch4]
 
@@ -177,32 +176,64 @@ fi
 ```bash
 #!/bin/bash
 
-PASSWORD='test'
+NB=$(cat /etc/passwd | wc -l)
 
-read -p 'Mot de passe :' -s mdp 
-
-if [[ $mdp == $password ]]
+if ! [[ $1 ]]
 then 
-  echo 'Bon mot de passe'
-else 
-  echo 'Mauvais mot de passe'
+  echo "Utilisation : $0 nom_utilisateur"
+  exit
+else
+  for i in $(seq 1 $NB) 
+  do
+    USER=$(cat /etc/passwd | cut -d : -f1 | sort | head -n $i | tail -n 1)  
+    if [[ $1 == USER ]]
+    then
+      echo "User $1 trouvé"
+      exit
+  done
+  echo "User $1 not found"
 fi
+exit
 ```
 
-
-
- ![](/TP2_IMG/TP2_3.png)
+![](/TP2_IMG/TP2_3.png)
 
 # Exercice 5. Factorielle [Anch5]
 
 ## Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).
 
+```bash
+#!/bin/bash
 
- ![](/TP2_IMG/TP2_4.png)
+NB=1
+
+for i in $(seq 1 $1)
+do
+  NB=$(($NB * $i))
+done
+echo "Facotirelle $1 = $NB"
+exit
+```
+
+![](/TP2_IMG/TP2_4.png)
  
 # Exercice 6. Le juste prix [Anch6]
 
 ## Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !” selon les cas (vous utiliserez $RANDOM).
+
+```bash
+#!/bin/bash
+
+RD_NB=$(( $RANDOM % 1000 + 1 ))
+read -p 'Entrez un nombre :' USER_NB
+
+while [[ $RD_NB != $RD_NB ]]
+do
+   
+done
+exit
+```
+
 
  ![](/TP2_IMG/TP2_5.png)
 
