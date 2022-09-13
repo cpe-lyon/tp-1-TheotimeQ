@@ -237,7 +237,7 @@ exit
 
  ![](/TP2_IMG/TP2_5.png)
 
-# [Anch7] Exercice 7. Statistiques 
+# Exercice 7. Statistiques <a id='Anch7'></a>
 
 ## 1. Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.
 
