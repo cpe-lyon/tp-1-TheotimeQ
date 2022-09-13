@@ -16,6 +16,8 @@
 
 [Exercice 7.Statistique](#Anch7)
 
+[Exercice 8.Bonus](#Anch8)
+
 # Exercice 1. Variables d'environnement <a id='Anch1'></a>
 
 ## 1 : Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?
@@ -198,6 +200,7 @@ exit
 ```
 
 ![](/TP2_IMG/TP2_3.png)
+![](/TP2_IMG/TP2_4.png)
 
 # Exercice 5. Factorielle <a id='Anch5'></a>
 
@@ -216,7 +219,17 @@ echo "Facotirelle $1 = $NB"
 exit
 ```
 
-![](/TP2_IMG/TP2_4.png)
+![](/TP2_IMG/TP2_6.png)
+![](/TP2_IMG/TP2_5.png)
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
  
 # Exercice 6. Le juste prix <a id='Anch6'></a>
 
@@ -235,10 +248,8 @@ done
 exit
 ```
 
- ![](/TP2_IMG/TP2_5.png)
+![](/TP2_IMG/TP2_5.png)
  
- 
-
 # Exercice 7. Statistiques <a id='Anch7'></a>
 
 ## 1. Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.
@@ -248,7 +259,7 @@ exit
 
  ![](/TP2_IMG/TP2_6.png)
 
-# Exercice 8. Statistiques <a id='Anch8'></a>
+# Exercice 8. Bonus <a id='Anch8'></a>
 
 ## Écrivez un script qui affiche les combinaisons possibles de couleurs (cf. TP 1) :
 
