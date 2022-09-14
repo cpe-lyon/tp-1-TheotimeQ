@@ -313,9 +313,65 @@ exit
 ![](/TP2_IMG/TP2_9.png)
 
 ## 2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
+
+```bash
+#!/bin/bash
+function is_number()
+{
+  re='^[+-]?[0-9]+([.][0-9]+)?$'
+  if ! [[ $1 =~ $re ]]
+  then
+      return 1
+  fi
+  if (( $1 >= -100 && $1 <= 100 ))
+  then
+      return 0
+  fi
+  return 1
+}
+
+if [[ $# > 0 ]]
+then
+    MAX=$1
+    MIN=$1
+else
+  echo "Veuillez entrer 3 chiffres reels entre -100 et 100"
+  exit
+fi
+  
+for VAR in "$@"
+do
+  is_number $VAR
+  if [[ $? -ne 0 ]]
+  then
+      echo 'Veuillez entrer des nombres reels entre -100 et 100'
+      exit
+  fi 
+  if [[ $VAR > $MAX ]]
+  then
+      MAX=$VAR
+  fi
+  if [[ $VAR < $MIN ]]
+  then
+      MIN=$VAR
+  fi
+  MOY=$(( $MOY + $VAR ))
+done
+
+MOY=$(( $MOY / $# ))
+
+echo "Max : $MAX"
+echo "Min : $Min"
+echo "Moy : $Moy"
+
+exit
+```
+
+![](/TP2_IMG/TP2_10.png)
+
 ## 3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.
 
- ![](/TP2_IMG/TP2_.png)
+Tableau ?
 
 # Exercice 8. Bonus <a id='Anch8'></a>
 
