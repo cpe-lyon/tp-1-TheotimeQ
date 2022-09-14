@@ -252,20 +252,62 @@ exit
 ![](/TP2_IMG/TP2_7.png)
 ![](/TP2_IMG/TP2_8.png)
 
-
-
-
-
-
-
-
-
-
-
- 
 # Exercice 7. Statistiques <a id='Anch7'></a>
 
 ## 1. Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.
+
+```bash
+#!/bin/bash
+function is_number()
+{
+  re='^[+-]?[0-9]+([.][0-9]+)?$'
+  if ! [[ $1 =~ $re ]]
+  then
+      return 1
+  fi
+  if (( $1 >= -100 && $1 <= 100 ))
+  then
+      return 0
+  fi
+  return 1
+}
+
+if [[ $# > 0 ]]
+then
+    MAX=$1
+    MIN=$1
+else
+  echo "Veuillez entrer des chiffres reels entre -100 et 100"
+  exit
+  
+for i in $1 $2 $3
+do
+  is_number $i
+  if [[ $? -ne 0 ]]
+  then
+      echo 'Veuillez entrer des nombres reels entre -100 et 100'
+      exit
+  fi 
+  if [[ $i > $MAX ]]
+  then
+      MAX=$i
+  fi
+  if [[ $i < $MIN ]]
+  then
+      MIN=$i
+  fi
+done
+MOY=$(( $1 + $2 + $3 ))
+MOY=$(( $MOY / $# ))
+
+echo "Max : $MAX"
+echo "Min : $Min"
+echo "Moy : $Moy"
+
+exit
+```
+
+![](/TP2_IMG/TP2_9.png)
 
 ## 2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
 ## 3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.
