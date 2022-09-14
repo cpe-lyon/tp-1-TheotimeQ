@@ -276,9 +276,12 @@ if [[ $# > 0 ]]
 then
     MAX=$1
     MIN=$1
-else
-  echo "Veuillez entrer des chiffres reels entre -100 et 100"
+fi
+if [[ $# != 3 ]]
+then 
+  echo "Veuillez entrer 3 chiffres reels entre -100 et 100"
   exit
+fi
   
 for i in $1 $2 $3
 do
