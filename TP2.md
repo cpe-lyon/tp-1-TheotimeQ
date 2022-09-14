@@ -222,15 +222,6 @@ exit
 ![](/TP2_IMG/TP2_6.png)
 ![](/TP2_IMG/TP2_5.png)
 
-
-
-
-
---------------------------------------------------------------------------------------------------------------
-
-
-
- 
 # Exercice 6. Le juste prix <a id='Anch6'></a>
 
 ## Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !” selon les cas (vous utiliserez $RANDOM).
@@ -239,16 +230,38 @@ exit
 #!/bin/bash
 
 RD_NB=$(( $RANDOM % 1000 + 1 ))
+NB_TRY = 0
 read -p 'Entrez un nombre :' USER_NB
-
-while [[ $RD_NB != $RD_NB ]]
+while [[ $RD_NB != $USER_NB ]]
 do
-   
+    if [[ $RD_NB < $USER_NB ]]
+    then 
+        echo "C'est moins !"
+    fi
+    if [[ $RD_NB > $USER_NB ]]
+    then
+        echo "C'est plus !"
+    fi
+    read -p 'Entrez un nommbre : ' USER_NB
+    NB_TRY=$(($NBTRY+1))
 done
+echo 'Gagné en $NB_TRY essais !"
 exit
 ```
 
-![](/TP2_IMG/TP2_5.png)
+![](/TP2_IMG/TP2_7.png)
+![](/TP2_IMG/TP2_8.png)
+
+
+
+
+
+
+
+
+
+
+
  
 # Exercice 7. Statistiques <a id='Anch7'></a>
 
@@ -257,12 +270,12 @@ exit
 ## 2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
 ## 3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.
 
- ![](/TP2_IMG/TP2_6.png)
+ ![](/TP2_IMG/TP2_.png)
 
 # Exercice 8. Bonus <a id='Anch8'></a>
 
 ## Écrivez un script qui affiche les combinaisons possibles de couleurs (cf. TP 1) :
 
 
-![](/TP2_IMG/TP2_7.png)
+![](/TP2_IMG/TP2_.png)
 
