@@ -436,7 +436,7 @@ fi
 print_stat ${tab[@]}
 ```
 
-![](/TP2_IMG/TP2_13.jpg)
+![](/TP2_IMG/TP2_13.png)
 
 # Exercice 8. Bonus <a id='Anch8'></a>
 
