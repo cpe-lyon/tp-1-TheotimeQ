@@ -249,8 +249,8 @@ echo 'Gagné en $NB_TRY essais !"
 exit
 ```
 
-![](/TP2_IMG/TP2_7.png)
-![](/TP2_IMG/TP2_8.png)
+![](/TP2_IMG/TP2_7.jpg)
+![](/TP2_IMG/TP2_8.jpg)
 
 # Exercice 7. Statistiques <a id='Anch7'></a>
 
@@ -310,7 +310,7 @@ echo "Moy : $Moy"
 exit
 ```
 
-![](/TP2_IMG/TP2_9.png)
+![](/TP2_IMG/TP2_9.jpg)
 
 ## 2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
 
