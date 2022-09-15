@@ -377,6 +377,20 @@ Tableau ?
 
 ## Écrivez un script qui affiche les combinaisons possibles de couleurs (cf. TP 1) :
 
+```bash
+#!/bin/bash
 
-![](/TP2_IMG/TP2_.png)
+for i in '39' '30' '31' '32' '33' '34' '35' '36' '37' '90' '91' '92' '93' '94' '95' '96' '97'
+do
+        for j in  '49' '40' '41' '42' '43' '44' '45' '46' '47' '100' '101' '102' '103' '104' '105' '106' '107'
+        do
+                echo -e "\e[${j};${i}m Hello World! \e[0;0m"
+        done
+done
+exit
+```
+
+![](/TP2_IMG/TP2_11.png)
+
+![](/TP2_IMG/TP2_12.png)
 
