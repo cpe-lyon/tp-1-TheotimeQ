@@ -73,18 +73,18 @@ User@localhost:~$ cd –
 ### 5 : essayez d’accéder au dossier /root ; que se passe-t-il ?
 Voici ce qu'il se passe , nous n'avons pas la permission d'acceder à root
 
- ![](/Images/IMG_2.png)
+ ![](/TP1_IMG/IMG_2.png)
 
 ### 6 : essayez la commande sudo cd /root ; que se passe-t-il ? Expliquez
 Voici ce qu'il se passe lorqu'on essay de forcer avec sudo 
 
-![](/Images/IMG_3.png)
+![](/TP1_IMG/IMG_3.png)
 
 Sudo cherche dans la commande dans les dossier specifié dans le PATH , cd etant Sheel Built-in , la commande n'est pas specifié dans le PATH. Sudo ne fonctionne pas
 
 ### 7 : à partir de votre dossier personnel, créez l’arborescence suivante :
 
- ![](/Images/IMG_4.png)
+ ![](/TP1_IMG/IMG_4.png)
 
 Pour créer l'arborescence suivante, je tape :
 
@@ -378,6 +378,6 @@ On verifie avec `ls –la`
 
 4 : on fait les changement de couleur necessaire et on ajoute l'heure .
 
- ![](/Images/IMG_5.png)
+ ![](/TP1_IMG/IMG_5.png)
  
  Aprés rechargement , cela fonctionne!
