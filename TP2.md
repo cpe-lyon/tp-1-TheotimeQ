@@ -272,12 +272,12 @@ function is_number()
   return 1
 }
 
-if [[ $# > 0 ]]
+if (( $# > 0 ))
 then
     MAX=$1
     MIN=$1
 fi
-if [[ $# != 3 ]]
+if (( $# != 3 ))
 then 
   echo "Veuillez entrer 3 chiffres reels entre -100 et 100"
   exit
@@ -291,11 +291,11 @@ do
       echo 'Veuillez entrer des nombres reels entre -100 et 100'
       exit
   fi 
-  if [[ $i > $MAX ]]
+  if (( $i > $MAX ))
   then
       MAX=$i
   fi
-  if [[ $i < $MIN ]]
+  if (( $i < $MIN ))
   then
       MIN=$i
   fi
@@ -347,11 +347,11 @@ do
       echo 'Veuillez entrer des nombres reels entre -100 et 100'
       exit
   fi 
-  if [[ $VAR > $MAX ]]
+  if (( $VAR > $MAX ))
   then
       MAX=$VAR
   fi
-  if [[ $VAR < $MIN ]]
+  if (( $VAR < $MIN ))
   then
       MIN=$VAR
   fi
@@ -398,11 +398,11 @@ function print_stat()
                         echo 'Veuillez entrer des nombres reels entre -100 et 100'
                         exit
                 fi
-                if [[ $VAR > $MAX ]]
+                if (( $VAR > $MAX ))
                 then
                         MAX=$VAR
                 fi
-                if [[ $VAR < $MIN ]]
+                if (( $VAR < $MIN ))
                 then
                         MIN=$VAR
                 fi
@@ -426,8 +426,8 @@ echo ${tab[@]}
 
 if (( $NB_NOTE > 0 ))
 then
-        MAX=$1
-        MIN=$1
+        MAX=-200
+        MIN=200
 else
         echo "Veuiller entrer au moins une note"
         exit
