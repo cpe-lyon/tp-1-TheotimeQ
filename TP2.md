@@ -367,7 +367,7 @@ echo "Moy : $Moy"
 exit
 ```
 
-![](/TP2_IMG/TP2_10.png)
+![](/TP2_IMG/TP2_10.jpg)
 
 ## 3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.
 
@@ -390,7 +390,7 @@ done
 exit
 ```
 
-![](/TP2_IMG/TP2_11.png)
+![](/TP2_IMG/TP2_11.jpg)
 
-![](/TP2_IMG/TP2_12.png)
+![](/TP2_IMG/TP2_12.jpg)
 
