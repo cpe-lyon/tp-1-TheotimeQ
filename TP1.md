@@ -376,7 +376,7 @@ On verifie avec `ls –la`
 
 3 : on recharge le .bash avec `source .bashrc\_bak`
 
-4 : on fait les changement de couleur necessaire et on ajoute l'heure .
+4 : on fait les changements de couleur nécessaire et on ajoute l'heure .
 
  ![](/TP1_IMG/IMG_5.png)
  
